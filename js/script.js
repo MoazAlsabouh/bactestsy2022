@@ -9,10 +9,6 @@ let countDown = setInterval(() => {
   let dateNow= new Date().getTime();
   // the remaining time
   let dateRema = countDownEnd - dateNow ;
-  // stop count down
-  if (dateRema <= 0) {
-    clearInterval(countDown);
-  }
   // time units
   let day = Math.floor(dateRema / (1000 * 60 * 60 * 24));
   let hou = Math.floor(dateRema % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
@@ -22,4 +18,8 @@ let countDown = setInterval(() => {
   hours.textContent = hou < 10 ? `0${hou}`: hou;
   minutes.textContent = min < 10 ? `0${min}`: min;
   seconds.textContent =  sec < 10 ? `0${sec}`: sec;
+  // stop count down
+  if (dateRema <= 0) {
+    clearInterval(countDown);
+  }
 }, 1000);
