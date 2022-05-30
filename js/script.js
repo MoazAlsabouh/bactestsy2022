@@ -2,7 +2,7 @@ let days = document.querySelector(".days");
 let hours = document.querySelector(".hours");
 let minutes = document.querySelector(".minutes");
 let seconds = document.querySelector(".secounds");
-let countDownEnd = new Date("May 30, 2022 07:30:00").getTime();
+let countDownEnd = new Date("Jun 2, 2022 07:30:00").getTime();
 
 let countDown = setInterval(() => {
   // time now
