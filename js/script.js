@@ -20,6 +20,10 @@ let countDown = setInterval(() => {
   seconds.textContent =  sec < 10 ? `0${sec}`: sec;
   // stop count down
   if (dateRema <= 0) {
+    days.textContent = 00;
+    hours.textContent = 00;
+    minutes.textContent = 00;
+    seconds.textContent =  00;
     clearInterval(countDown);
   }
 }, 1000);
